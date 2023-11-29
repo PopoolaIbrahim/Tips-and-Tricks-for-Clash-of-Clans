@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      background-color: gray;
+      justify-content: center;
+      max-width: 100%
+          }
+    .header {
+      background-color: black;
+      height: 80px;
+      text-align: center;
+      line-height: 80px; /* Vertically center the text */
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      z-index: 1;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidebar .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 30px;
+    }
+
+    .open-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .sidebar-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+     .advert-container {
+     display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .responsive-button {
+      width: 250px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      background-color: white;
+      color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px; /* Margin on all sides */
+      max-width: 400px; /* Maximum width for responsiveness */
+      width: 100%; /* Expand to 100% within the container */
+    }
+
+    .responsive-button img {
+      width: 55px; /* Adjust the size of the square image icon */
+      height: 55px; /* Same as width to make it square */
+      margin-right: 10px; /* Margin between the icon and text */
+    }
+
+    .responsive-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header Bar-->
+  <div class="header">Clash of Clans Tips and Tricks</div>
+    
+  <!-- Sidebar button -->
+  <div class="open-btn" id="openBtn" onclick="openSidebar()">&#9776;</div>
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>    
+    <!-- Responsive Image -->
+    <img class="sidebar-image" src="https://popoolaibrahim.github.io/Commands-For-Minecraft/minecraft_header.png" alt="Minecraft Header">
+    <a href="https://popoolaibrahim.github.io/Commands-For-Minecraft/"><i class="bi bi-house-door"></i> Home</a>
+    <a href="https://popoolaibrahim.github.io/Commands-For-Minecraft/contact.html"><i class="bi bi-share"></i> Contact Us</a>
+     <!--  <a href="#"><i class="bi bi-bookmark"></i> Bookmarks</a> -->
+     <!--  <a href="#"><i class="bi bi-grid"></i> More Apps</a> -->
+     <!--  <a href="#"><i class="bi bi-star"></i> Rate Us</a> -->
+     <!--  <a href="#"><i class="bi bi-share"></i> Share</a> -->
+     <!--  <a href="#"><i class="bi bi-cash-stack"></i> Donate</a> -->
+  </div>
+
+  <!-- Main Page Advert Banner -->
+  <div class="advert-container">
+    <a href="https://aliexpress.com"><img class="advert-image" src="https://popoolaibrahim.github.io/Commands-For-Minecraft/advert.png" alt="Banner"></a>
+  </div>
+
+  <!-- Main Page buttons Link-->
+  <div class="button-container">
+  <button class="responsive-button"  onclick="teleportation()">
+      <img src="Teleportation.png" alt="Icon"> 
+Teleportation Commands 
+    </button>  
+      <button class="responsive-button" onclick="gamemode()">
+      <img src="Gamemode.png" alt="Icon"> 
+Gamemode Commands     
+  </button>
+    <button class="responsive-button" onclick="time()">
+      <img src="Time.png" alt="Icon"> 
+Time Control Commands
+    </button>
+      <button class="responsive-button" onclick="custom()">
+      <img src="Custom.png" alt="Icon"> 
+Custom Commands    
+    </button>
+        <button class="responsive-button" onclick="nbt()">
+      <img src="NBT.png" alt="Icon"> 
+NBT Editing Commands
+        </button>
+    <button class="responsive-button" onclick="weather()">
+      <img src="Weather.png" alt="Icon"> 
+Weather Commands
+    </button>
+      <button class="responsive-button" onclick="inventory()">
+        <img src="Inventory.png" alt="Icon"> 
+Inventory Commands
+      </button>
+    <button class="responsive-button" onclick="spawn()">
+      <img src="Spawn.png" alt="Icon"> 
+Spawn and Mob Commands
+    </button>
+    <button class="responsive-button" onclick="entity()">
+      <img src="Entity.png" alt="Icon"> 
+Entity Data Commands
+    </button>
+    <button class="responsive-button" onclick="block()">
+      <img src="Block.png" alt="Icon"> 
+Block Manipulation Commands
+    </button>
+  <button class="responsive-button" onclick="redstone()">
+      <img src="Redstone.png" alt="Icon"> 
+Redstone Commands
+    </button>
+    <button class="responsive-button" onclick="scoreboard()">
+      <img src="Scoreboard.png" alt="Icon"> 
+Scoreboard Commands
+    </button>
+    <button class="responsive-button" onclick="advancement()">
+      <img src="Advancement.png" alt="Icon"> 
+Advancement Commands
+    </button>
+    <button class="responsive-button" onclick="world()">
+      <img src="World.png" alt="Icon"> 
+World Border Commands
+    </button>
+    <button class="responsive-button" onclick="effect()">
+      <img src="Effect.png" alt="Icon"> 
+Effect Commands
+    </button>
+    <button class="responsive-button" onclick="plugin()">
+      <img src="Plugin.png" alt="Icon"> 
+Plugin and Server Commands
+    </button>
+    <button class="responsive-button" onclick="chat()">
+      <img src="Chat.png" alt="Icon"> 
+Chat and Message Commands
+    </button>
+    <button class="responsive-button" onclick="structure()">
+      <img src="Structure.png" alt="Icon"> 
+Structure Commands
+      </button>
+    <button class="responsive-button" onclick="resource()">
+      <img src="Resource.png" alt="Icon"> 
+Resource Pack Commands
+    </a>
+    </button>
+
+  </div>
+<br><br>
+<br><br>
+
+  <script>
+    var imageURL = "https://popoolaibrahim.github.io/Commands-For-Minecraft/minecraft_header.png"  //advert.png";
+    var bannerImage = document.getElementById("banner");
+    bannerImage.src = imageURL;
+    bannerImage.onload = function() {
+      // Display the banner if the image loads successfully
+      document.querySelector(".banner-container").style.display = "block";
+    };
+    bannerImage.onerror = function() {
+      // Hide the banner if the image fails to load
+      document.querySelector(".banner-container").style.display = "none";
+    };
+    function openSidebar() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+    function closeSidebar() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+    function teleportation() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Teleportation.html';
+    }
+    function gamemode() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Gamemode.html';
+        }
+    function time() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Time.html';
+        }
+    function custom() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Custom.html';
+        }
+    function nbt() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/NBT.html';
+        }
+    function weather() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Weather.html';
+    }
+    function inventory() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Inventory.html';
+        }
+    function spawn() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Spawn.html';
+        }
+    function entity() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Entity.html';
+        }
+    function block() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Block.html';
+        }
+    function redstone() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Redstone.html';
+    }
+    function scoreboard() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Scoreboard.html';
+        }
+    function advancement() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Advancement.html';
+        }
+    function world() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/World.html';
+        }
+    function effect() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Effect.html';
+        }
+    function plugin() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Plugin.html';
+    }
+    function chat() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Chat.html';
+        }
+    function structure() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Structure.html';
+        }
+    function resource() {
+            window.location.href = 'https://popoolaibrahim.github.io/Commands-For-Minecraft/Resource.html';
+    }
+  </script>
+</body>
+</html>
